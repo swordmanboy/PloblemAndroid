@@ -1,0 +1,13 @@
+final Dialog boxAddLeave = new Dialog(getActivity());
+boxAddLeave.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));           //Background not black
+
+//set widht and height in window 
+int width_of_dialog = (int) (application.getWidth_screen()*0.85f);
+int height_of_dialog = (int) (application.getHeight_screen() * 0.8f);
+WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+lp.copyFrom(boxAddLeave.getWindow().getAttributes());
+lp.width = width_of_dialog;
+lp.height = height_of_dialog;
+
+boxAddLeave.show();
+boxAddLeave.getWindow().setAttributes(lp);
