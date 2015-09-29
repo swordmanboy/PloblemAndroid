@@ -1,0 +1,8 @@
+    public static void keyboardHide(Activity act){
+//      Check if no view has focus:
+        View view = act.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) act.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
